@@ -6,6 +6,8 @@
 build/
 DerivedData
 Package.pins
+*.xcodeproj
+*.xcworkspace
 
 ## Various settings
 *.pbxuser
