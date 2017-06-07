@@ -1,0 +1,4 @@
+module CLibreSSL {
+    umbrella header "/Volumes/Developer/macOS/Linux-Server-Side-Swift-Benchmarking/VaporPress/.build/checkouts/clibressl.git-4924093653370840509/Sources/CLibreSSL/include/CLibreSSL.h"
+    export *
+}
