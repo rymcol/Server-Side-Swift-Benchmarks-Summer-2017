@@ -33,7 +33,8 @@ let app = BasicRouter { route in
 
         let json = JSONCreator().generateJSON()
 
-        return Response(content: json, contentType: .json)
+//        return Response(content: json, contentType: .json)
+        return Response(content: json)
     }
 }
 

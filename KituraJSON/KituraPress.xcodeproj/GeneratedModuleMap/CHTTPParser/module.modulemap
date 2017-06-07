@@ -1,5 +1,0 @@
-framework module CHTTPParser {
-    umbrella "/Users/Ryan/Developer/macOS/Linux-Server-Side-Swift-Benchmarking/KituraJSON/Packages/CHTTPParser-0.3.0/Sources/CHTTPParser/include"
-    link framework "CHTTPParser"
-    export *
-}
