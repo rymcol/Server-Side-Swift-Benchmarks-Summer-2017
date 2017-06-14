@@ -2,17 +2,20 @@ import PackageDescription
 
 let package = Package(
     name: "VaporPress",
-    targets: [],
+    targets: [
+        Target(name: "App"),
+        Target(name: "Run", dependencies: ["App"]),
+    ],
     dependencies: [
-        .Package(url: "https://github.com/vapor/engine.git", majorVersion: 1, minor: 0),
-        .Package(url: "https://github.com/vapor/routing.git", majorVersion: 1, minor: 0)
+        .Package(url: "https://github.com/vapor/vapor.git", majorVersion: 2),
+        .Package(url: "https://github.com/vapor/fluent-provider.git", majorVersion: 1)
     ],
     exclude: [
-	    "Config",
+        "Config",
         "Database",
         "Localization",
         "Public",
         "Resources",
-		"Tests",
     ]
 )
+

@@ -1,3 +1,10 @@
+//
+//  BlogHandler.swift
+//  App
+//
+//  Created by Ryan Collins on 6/12/17.
+//
+
 import Core
 
 #if os(Linux)
@@ -6,17 +13,17 @@ import Core
     import Darwin
 #endif
 
-let start1 = "<section id=\"content\"><div class=\"container\">".bytes
-let start2 = "<div class=\"row blog-post\"><div class=\"col-xs-12\"><h1>Test Post ".bytes
-let start4 = "</h1><img src=\"/img/random/random-".bytes
-let start5 = ".jpg\" alt=\"Random Image ".bytes
-let start6 = "\" class=\"alignleft feature-image img-responsive\" /><div class=\"content\">".bytes
-let start7 = "</div>".bytes
-let start8 = "</div></div</div></section>".bytes
+let start1 = "<section id=\"content\"><div class=\"container\">"
+let start2 = "<div class=\"row blog-post\"><div class=\"col-xs-12\"><h1>Test Post "
+let start4 = "</h1><img src=\"/img/random/random-"
+let start5 = ".jpg\" alt=\"Random Image "
+let start6 = "\" class=\"alignleft feature-image img-responsive\" /><div class=\"content\">"
+let start7 = "</div>"
+let start8 = "</div></div</div></section>"
 
 struct BlogPageHandler {
     
-    func loadPageContent() -> Bytes {
+    func loadPageContent() -> String {
         
         var finalContent = start1
         
@@ -28,11 +35,11 @@ struct BlogPageHandler {
             let imageNumber = Int(arc4random_uniform(25) + 1)
             
             finalContent += start2
-            finalContent += "\(index)".bytes
+            finalContent += "\(index)"
             finalContent += start4
-            finalContent += "\(imageNumber)".bytes
+            finalContent += "\(imageNumber)"
             finalContent += start5
-            finalContent += "\(imageNumber)".bytes
+            finalContent += "\(imageNumber)"
             finalContent += start6
             finalContent += value
             finalContent += start7
