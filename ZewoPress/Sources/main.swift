@@ -23,7 +23,7 @@ let app = BasicRouter { route in
 
         let header = CommonHandler().getHeader()
         let footer = CommonHandler().getFooter()
-        let body = BlogHandler().loadPageContent()
+        let body = BlogPageHandler().loadPageContent()
         let blogPage = header + body + footer
 
         return Response(body: blogPage)
