@@ -15,7 +15,7 @@ let router = Router()
 router.get("/") { _, response, next in
     let header = CommonHandler().getHeader()
     let footer = CommonHandler().getFooter()
-    let body = IndexHandler().generateContent()
+    let body = IndexHandler().loadPageContent()
     let homePage = header + body + footer
     try response.send(homePage).end()
 }
@@ -24,7 +24,7 @@ router.get("/blog") { _, response, next in
      response.headers["Content-Type"] = "text/html; charset=utf-8"
      let header = CommonHandler().getHeader()
      let footer = CommonHandler().getFooter()
-     let body = BlogHandler().loadPageContent()
+     let body = BlogPageHandler().loadPageContent()
      let blogPage = header + body + footer
      try response.send(blogPage).end()
 }
